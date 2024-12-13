@@ -1,6 +1,6 @@
 # Let's create a cleaned-up README file with a professional tone and clear structure.
 
-content = """
+
 # Solution Approach for Moving Zeros in a List
 
 This README explains the thought process and solutions explored for a coding problem involving rearranging zeros in a list. The goal was to move all zeros in the list to the end while maintaining the order of non-zero elements.
