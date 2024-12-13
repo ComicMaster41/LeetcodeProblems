@@ -1,5 +1,3 @@
-# Let's create a cleaned-up README file with a professional tone and clear structure.
-
 
 # Solution Approach for Moving Zeros in a List
 
