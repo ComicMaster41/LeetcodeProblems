@@ -70,5 +70,3 @@ class Solution:
 
 This problem served as an excellent reintroduction to coding challenges. While the solution wasn’t entirely original, it helped me rebuild confidence and get back into problem-solving mode. I look forward to tackling more complex challenges in the future!
 ```
-
-You can paste this directly into your `README.md` file on GitHub. Let me know if you need help with anything else!
