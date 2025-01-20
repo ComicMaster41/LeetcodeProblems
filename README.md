@@ -69,13 +69,3 @@ Want to add your solutions or improve mine? Contributions are welcome! Here's ho
 Feel free to open issues or contact me for suggestions and feedback.
 
 ---
-
-### Happy Coding! 💻
-```
-      _
-     | |     ___   __ _  ___
-     | |    / _ \ / _` |/ _ \
-     | |___| (_) | (_| |  __/
-     |______\___/ \__, |\___|
-                   |___/
-```
