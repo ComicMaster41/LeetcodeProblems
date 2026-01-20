@@ -1,0 +1,57 @@
+# LeetCode 3314 — Construct the Minimum Bitwise Array I (C++)
+
+This problem is about constructing an array `ans` using bitwise operators, specifically by finding values that satisfy a condition with OR and `+1`.
+
+## Key Takeaways
+- Practiced bitwise shifting in C++: `<<` and `>>`
+- Used a “sliding mask” approach (a moving bit probe) to scan binary patterns
+- Learned how to detect the first `0` bit after a run of trailing `1`s
+
+## Core Idea (Mask Scan)
+For each `p = nums[i]`:
+- Start with `mask = 1` (binary `...0001`)
+- While `(p & mask) != 0`, shift the mask left (`mask <<= 1`) to move through trailing `1`s
+- When the loop stops, we found the first `0` bit after the trailing `1`s
+- Step back one bit using `mask >> 1` to get the value to subtract
+- Compute `res = p - (mask >> 1)` and append it to `ans`
+
+Special case:
+- If `nums[i] == 2`, the answer is `-1` (it won’t work for that value in this problem’s setup)
+
+## C++ Solution
+
+```cpp
+#include <vector>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> minBitwiseArray(vector<int>& nums) {
+        vector<int> ans;
+
+        for (size_t i = 0; i < nums.size(); ++i) {
+            if (nums[i] == 2) { // special case
+                ans.push_back(-1);
+            } else {
+                int p = nums[i];
+
+                // mask is our "sliding window" bit probe
+                int mask = 1;
+
+                // Move left while the current bit in p is 1
+                while ((p & mask) != 0) {
+                    mask <<= 1;
+                }
+
+                // mask is now at the first 0 bit after trailing 1s,
+                // so move back one step
+                int sub = mask >> 1;
+
+                int res = p - sub;
+                ans.push_back(res);
+            }
+        }
+
+        return ans;
+    }
+};
