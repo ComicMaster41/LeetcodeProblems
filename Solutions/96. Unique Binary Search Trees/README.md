@@ -1,0 +1,3 @@
+For **LeetCode 96 (Unique Binary Search Trees)**, my first instinct was to treat it like a permutations/combinations problem and try something like `n!`. The key insight, though, is that the count of structurally unique BSTs is given by the **Catalan numbers**—so you don’t actually build any trees, you just compute the Catalan value (typically via DP or the closed-form). Once I recognized “Catalan,” the implementation was straightforward; the real challenge was spotting the pattern in the first place.
+
+**TL;DR:** Unique BST counts follow the Catalan numbers, so the solution is about recognizing that pattern and computing it (no tree construction needed).
