@@ -1,5 +1,24 @@
-I'm not cleaning up this read because I want to maintain my problem solving process as indicated in the comments
+## LeetCode 1689 — Partitioning Into Minimum Number Of Deci-Binary Numbers
 
+I’m **not cleaning up this code** because I want to preserve my problem-solving process (as shown in the comments).
+
+### Key realization
+A “deci-binary” number can only use digits **0** and **1**.
+
+So if the target number has a digit like **8**, then across all the deci-binary numbers you add together, you need **at least 8 ones stacked** in that position to reach 8.
+
+That means:
+> **The minimum number of deci-binary numbers needed = the maximum digit in the string.**
+
+Examples:
+- `32` → max digit is `3` → answer `3`
+- `82734` → max digit is `8` → answer `8`
+
+---
+
+### My (intentionally messy) solution
+
+```cpp
 class Solution {
 public:
     int minPartitions(string n) {
